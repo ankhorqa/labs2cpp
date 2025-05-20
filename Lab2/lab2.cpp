@@ -12,18 +12,12 @@ private:
 public:
     Character(const std::string& n, int h, int a, int d)
         : name(n), health(h), attack(a), defense(d) {
-        std::cout << "Character " << name << " created!\n";
     }
 
-    ~Character() {
-        std::cout << "Character " << name << " destroyed!\n";
-    }
 
     void displayInfo() const {
-        std::cout << "Name: " << name
-                  << ", HP: " << health
-                  << ", Attack: " << attack
-                  << ", Defense: " << defense << std::endl;
+        std::cout << "Имя: " << name << ", ХП: " << health
+                  << ", Атака: " << attack << ", Защита: " << defense << std::endl;
     }
 };
 
@@ -35,17 +29,14 @@ private:
 public:
     Weapon(const std::string& n, int dmg, float w)
         : name(n), damage(dmg), weight(w) {
-        std::cout << "Weapon " << name << " created!\n";
+        std::cout << "Оружие " << name << " создано!\n";
     }
 
-    ~Weapon() {
-        std::cout << "Weapon " << name << " destroyed!\n";
-    }
 
     void displayInfo() const {
-        std::cout << "Weapon Name: " << name
-                  << ", Damage: " << damage
-                  << ", Weight: " << weight << "kg" << std::endl;
+        std::cout << "Оружие: " << name
+                  << ", Урон: " << damage
+                  << ", Вес: " << weight << "кг." << std::endl;
     }
 };
 
@@ -59,30 +50,27 @@ private:
 public:
     Monster(const std::string& n, int h, int a, int d)
         : name(n), health(h), attack(a), defense(d) {
-        std::cout << "Monster " << name << " created!\n";
+        std::cout << "Враг " << name << " появился!\n";
     }
 
-    ~Monster() {
-        std::cout << "Monster " << name << " destroyed!\n";
-    }
 
     void displayInfo() const {
-        std::cout << "Name: " << name
-                  << ", HP: " << health
-                  << ", Attack: " << attack
-                  << ", Defense: " << defense << std::endl;
+        std::cout << "Имя: " << name
+                  << ", ХП: " << health
+                  << ", Атака: " << attack
+                  << ", Защита: " << defense << std::endl;
     }
 };
 
 int main() {
-    Character hero("Knight", 100, 20, 10);
+    Character hero("Рыцарь", 100, 20, 10);
     hero.displayInfo();  
 
-    Monster goblin("Goblin", 50, 15, 5);
-    goblin.displayInfo();  
+    Monster skelet("Скелет", 50, 15, 5);
+    skelet.displayInfo();  
 
-    Weapon sword("Sword", 30, 1.5f);
-    Weapon bow("Longbow", 20, 3.5f);
+    Weapon sword("Меч", 30, 1.5f);
+    Weapon bow("Лук", 20, 3.5f);
 
     sword.displayInfo();
     bow.displayInfo();
